@@ -1,6 +1,6 @@
 "use client"
 
-import { FaGithub, FaLinkedin, FaBehance, FaDiscord } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaBehance, FaDiscord, FaWhatsapp, FaEnvelope, FaRegEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -26,29 +26,15 @@ export default function Contact() {
                 href="mailto:hello@maretyui.com"
                 className="flex items-center gap-3 text-foreground hover:text-cyan transition-colors group"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
+                <FaRegEnvelope className="w-4.5 h-4.5" />
                 <span className="font-medium group-hover:underline">hello@maretyui.com</span>
               </a>
 
               <a
-                href="tel:+49123456789"
+                href="tel:+4917646644971"
                 className="flex items-center gap-3 text-foreground hover:text-cyan transition-colors group"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
+                <FaPhoneAlt className="w-4.3 h-4.3" />
                 <span className="font-medium group-hover:underline">+49 (0) 176 466 44971</span>
               </a>
 
@@ -65,19 +51,20 @@ export default function Contact() {
               {[
                 { name: "GitHub", icon: <FaGithub className="text-3xl" />, url: "https://github.com/maretyui" },
                 { name: "Discord", icon: <FaDiscord className="text-3xl" />, url: "https://discord.com/users/837262476680495104" },
+                { name: "Whatsapp", icon: <FaWhatsapp className="text-3xl" />, url: "https://wa.me/+4917646644971?text=Hey%20Maretyui,%20" },
                 // { name: "LinkedIn", icon: <FaLinkedin className="text-3xl" />, url: "https://linkedin.com" },
               ].map((social) => (
                 <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-6 border border-border/30 rounded-xl text-center hover:border-cyan/50 hover:bg-cyan/5 transition-all group"
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-6 border border-border/30 rounded-xl text-center hover:border-cyan/50 hover:bg-cyan/5 transition-all group duration-200"
                 >
-                  <div className="mb-3 flex justify-center">{social.icon}</div>
-                  <p className="text-sm font-medium text-foreground group-hover:text-cyan transition-colors">
-                    {social.name}
-                  </p>
+                <div className="mb-3 flex justify-center transition-transform duration-300 ease-out group-hover:scale-110 group- transition-">{social.icon}</div>
+                <p className="text-sm font-medium text-foreground transition-transform duration-300 ease-out group-hover:scale-[1.05] group-hover:text-cyan group-hover:text-cyan">
+                {social.name}
+                </p>
                 </a>
               ))}
             </div>
