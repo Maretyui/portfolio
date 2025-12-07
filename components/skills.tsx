@@ -8,7 +8,7 @@ export default function Skills() {
       category: "Design",
       color: "text-purple",
       glow: "",
-      items: ["UI/UX Design", "Design Systems", "PowerPoint", "Responsive Design", "Prototyping"],
+      items: ["UI/UX Design", "Typography", "PowerPoint", "Responsive Design", "Draw.io"],
     },
     {
       category: "Development",
@@ -20,7 +20,7 @@ export default function Skills() {
       category: "Coaching",
       color: "text-yellow",
       glow: "",
-      items: ["Freestyle Technique", "Water Safety", "Stroke Training", "Youth Instruction"],
+      items: ["Freestyle Technique", "Water Safety", "Stroke Training", "Diving Basics", "Endurance Building"],
     },
   ]
 
