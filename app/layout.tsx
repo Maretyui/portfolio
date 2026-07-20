@@ -10,9 +10,10 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Maretyui | Maik Reinhardt",
   description:
-    "Portfolio website of Maik Reinhardt, showcasing projects and skills in web development and design aswell as swimming and diving.",
-     icons: {
-    icon: '/favicon.ico'}
+    "Portfolio website of Maik Reinhardt, showcasing projects and skills in web development and design as well as swimming and diving.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({
