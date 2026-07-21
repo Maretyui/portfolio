@@ -22,21 +22,25 @@ export default function Hero({ setActiveSection }: HeroProps) {
           <div className="flex items-center justify-center gap-4 flex-wrap">
             {[{
               href: "https://discord.com/users/837262476680495104",
-              icon: <FaDiscord />
+              icon: <FaDiscord />,
+              label: "Discord"
             },{
               href: "https://github.com/maretyui",
-              icon: <FaGithub />
+              icon: <FaGithub />,
+              label: "GitHub"
             },{
               href: "#",
-              icon: <FaLinkedin />
-            }].map(({ href, icon }, idx) => (
+              icon: <FaLinkedin />,
+              label: "LinkedIn"
+            }].map(({ href, icon, label }, idx) => (
               <a
                 key={idx}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center 
-                           transition-all duration-300 ease-out 
+                aria-label={label}
+                className="w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center
+                           transition-all duration-300 ease-out
                            hover:bg-cyan hover:scale-105 hover:shadow-lg"
               >
                 <span className="text-3xl">{icon}</span>
