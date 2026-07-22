@@ -61,8 +61,8 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="p-6 border border-border/30 rounded-xl text-center hover:border-cyan/50 hover:bg-cyan/5 transition-all group duration-200"
                 >
-                <div className="mb-3 flex justify-center transition-transform duration-300 ease-out group-hover:scale-110 group- transition-">{social.icon}</div>
-                <p className="text-sm font-medium text-foreground transition-transform duration-300 ease-out group-hover:scale-[1.05] group-hover:text-cyan group-hover:text-cyan">
+                <div className="mb-3 flex justify-center transition-transform duration-300 ease-out group-hover:scale-110">{social.icon}</div>
+                <p className="text-sm font-medium text-foreground transition-transform duration-300 ease-out group-hover:scale-[1.05] group-hover:text-cyan">
                 {social.name}
                 </p>
                 </a>
@@ -72,7 +72,7 @@ export default function Contact() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-border/30 text-center text-xs text-muted-foreground">
-          <p>© 2025 Maik Reinhardt. Design & Development. Hamburg, Germany.</p>
+          <p>© 2026 Maik Reinhardt. Design & Development. Hamburg, Germany.</p>
         </div>
       </div>
     </section>
