@@ -75,7 +75,7 @@ export default function Hero({ setActiveSection }: HeroProps) {
             <button
               onClick={scrollToAbout}
               className="mt-16 flex flex-col items-center cursor-pointer group"
-              aria-label="Scroll to training schedule"
+              aria-label="Scroll to about section"
             >
               <div className="animate-scroll-fade flex flex-col items-center transition-all duration-300 group-hover:opacity-80 group-hover:translate-y-1">
                 <ChevronDown className="h-8 w-8 text-primary -mb-5 transition-transform duration-300 group-hover:translate-y-1" />
