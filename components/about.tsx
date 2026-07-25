@@ -34,7 +34,7 @@ export default function About() {
 
           <div className="space-y-6">
             <p className="text-base md:text-lg text-foreground leading-relaxed">
-              I'm Maik Reinhardt, a 16-year-old from Hamburg, Germany, fighting for two distinct worlds: swimming
+              I'm Maik Reinhardt, an 18-year-old from Hamburg, Germany, fighting for two distinct worlds: swimming
               and web design.
             </p>
 
