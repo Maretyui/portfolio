@@ -1,5 +1,7 @@
 "use client"
 
+import { Check } from "lucide-react"
+
 export default function About() {
   return (
     <section id="about" className="py-20 md:py-32 px-4 md:px-8">
@@ -51,15 +53,15 @@ export default function About() {
 
             <div className="pt-6 space-y-3">
               <div className="flex items-center gap-3">
-                <span className="text-cyan">✓</span>
+                <Check className="w-4 h-4 text-cyan" />
                 <span className="text-sm">Certified Swimming Instructor</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-yellow">✓</span>
+                <Check className="w-4 h-4 text-yellow" />
                 <span className="text-sm">Certified Web Designer</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-lime">✓</span>
+                <Check className="w-4 h-4 text-lime" />
                 <span className="text-sm">Full-Stack Developer</span>
               </div>
             </div>
