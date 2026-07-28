@@ -1,6 +1,6 @@
 "use client"
 import { ChevronDown } from "lucide-react"
-import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaDiscord, FaGithub } from "react-icons/fa"
 
 interface HeroProps {
   setActiveSection: (section: string) => void
@@ -28,10 +28,6 @@ export default function Hero({ setActiveSection }: HeroProps) {
               href: "https://github.com/maretyui",
               icon: <FaGithub />,
               label: "GitHub"
-            },{
-              href: "#",
-              icon: <FaLinkedin />,
-              label: "LinkedIn"
             }].map(({ href, icon, label }, idx) => (
               <a
                 key={idx}
