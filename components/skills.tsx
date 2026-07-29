@@ -1,25 +1,20 @@
 "use client"
 
-import { useState } from "react"
-
 export default function Skills() {
   const skills = [
     {
       category: "Design",
       color: "text-purple",
-      glow: "",
       items: ["UI/UX Design", "Typography", "PowerPoint", "Responsive Design", "Draw.io"],
     },
     {
       category: "Development",
       color: "text-cyan",
-      glow: "",
       items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Web APIs"],
     },
     {
       category: "Coaching",
       color: "text-yellow",
-      glow: "",
       items: ["Freestyle Technique", "Water Safety", "Stroke Training", "Diving Basics", "Endurance Building"],
     },
   ]
@@ -43,8 +38,6 @@ export default function Skills() {
               key={skill.category}
               className="relative p-8 border border-border/30 rounded-xl transition-all overflow-hidden group"
             >
-
-
               <h3 className={`text-2xl font-bold mb-6 transition-colors ${skill.color} group-hover:text-foreground`}>
                 {skill.category}
               </h3>
