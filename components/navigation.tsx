@@ -56,9 +56,10 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
             Contact
           </button>
           <a
-            href="https://discord.com/users/837262476680495104" 
+            href="https://discord.com/users/837262476680495104"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Discord (opens in a new tab)"
             className="text-sm transition-colors flex items-center gap-2 text-muted-foreground hover:text-foreground"
           >
             <FaDiscord className="w-4 h-4" />
