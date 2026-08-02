@@ -34,7 +34,7 @@ export default function Contact() {
                 href="tel:+4917646644971"
                 className="flex items-center gap-3 text-foreground hover:text-cyan transition-colors group"
               >
-                <FaPhoneAlt className="w-4.3 h-4.3" />
+                <FaPhoneAlt className="w-4.5 h-4.5" />
                 <span className="font-medium group-hover:underline">+49 (0) 176 466 44971</span>
               </a>
 
