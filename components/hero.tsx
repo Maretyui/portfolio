@@ -34,7 +34,7 @@ export default function Hero({ setActiveSection }: HeroProps) {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={label}
+                aria-label={`${label} (opens in a new tab)`}
                 className="w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center
                            transition-all duration-300 ease-out
                            hover:bg-cyan hover:scale-105 hover:shadow-lg"
