@@ -86,7 +86,11 @@ export default function Projects() {
               <a
                 key={index}
                 href={isLink ? project.link : undefined}
-                {...(isLink && { target: "_blank", rel: "noopener noreferrer" })}
+                {...(isLink && {
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  "aria-label": `${project.title} (opens in a new tab)`,
+                })}
                 onMouseEnter={() =>
                   setHoverColors((prev) => {
                     const newColors = [...prev]
