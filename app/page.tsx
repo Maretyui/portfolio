@@ -13,7 +13,7 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("home")
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main id="main-content" className="min-h-screen bg-background text-foreground">
       <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
       <Hero setActiveSection={setActiveSection} />
       <Services />
