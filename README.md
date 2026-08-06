@@ -8,3 +8,7 @@ My personal developer portfolio — source for a previous version of [maretyui.c
 
 - Next.js (static export) + TypeScript
 - Tailwind CSS
+
+## License
+
+MIT — see [LICENSE](LICENSE).
