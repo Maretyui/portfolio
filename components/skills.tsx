@@ -47,7 +47,7 @@ export default function Skills() {
                     key={item}
                     className="flex items-center gap-3 text-muted-foreground transition-colors group-hover:text-foreground"
                   >
-                    <span className={`text-lg transition-colors ${skill.color} group-hover:text-foreground`}>→</span>
+                    <span aria-hidden="true" className={`text-lg transition-colors ${skill.color} group-hover:text-foreground`}>→</span>
                     <span className="text-sm">{item}</span>
                   </li>
                 ))}
