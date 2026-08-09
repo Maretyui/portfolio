@@ -49,7 +49,7 @@ export default function Services() {
               key={index}
               className="p-8 rounded-2xl border border-border/40 bg-background/40 shadow-sm backdrop-blur-sm transition-all"
             >
-              <div className="mb-4">{service.icon}</div>
+              <div className="mb-4" aria-hidden="true">{service.icon}</div>
               <h3 className="text-xl font-semibold mb-3 text-foreground">
                 {service.title}
               </h3>
