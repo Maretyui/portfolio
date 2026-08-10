@@ -8,11 +8,18 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://maretyui.com"),
   title: "Maretyui | Maik Reinhardt",
   description:
     "Portfolio website of Maik Reinhardt, showcasing projects and skills in web development and design as well as swimming and diving.",
   icons: {
     icon: "/favicon.ico",
+  },
+  alternates: {
+    canonical: "/",
+  },
+  formatDetection: {
+    telephone: false,
   },
 }
 
