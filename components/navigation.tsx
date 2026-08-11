@@ -70,6 +70,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
 
           <button
             onClick={toggleLanguage}
+            aria-label={language === "EN" ? "Switch language to German" : "Sprache auf Englisch umschalten"}
             className="text-sm transition-colors flex items-center gap-2 text-muted-foreground hover:text-foreground"
           >
             <FaGlobe className="w-4 h-4" />
