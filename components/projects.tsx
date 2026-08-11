@@ -141,6 +141,7 @@ export default function Projects() {
                   {isLink && (
                     <div className="shrink-0 w-12 h-12 rounded-full bg-cyan/10 flex items-center justify-center group-hover:bg-cyan/20 transition-colors duration-300">
                       <svg
+                        aria-hidden="true"
                         className="w-6 h-6 text-cyan group-hover:translate-x-1 group-hover:scale-110 transition-transform duration-300 ease-out"
                         fill="none"
                         stroke="currentColor"
