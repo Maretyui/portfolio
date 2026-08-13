@@ -53,15 +53,15 @@ export default function About() {
 
             <div className="pt-6 space-y-3">
               <div className="flex items-center gap-3">
-                <Check className="w-4 h-4 text-cyan" />
+                <Check className="w-4 h-4 text-cyan" aria-hidden="true" />
                 <span className="text-sm">Certified Swimming Instructor</span>
               </div>
               <div className="flex items-center gap-3">
-                <Check className="w-4 h-4 text-yellow" />
+                <Check className="w-4 h-4 text-yellow" aria-hidden="true" />
                 <span className="text-sm">Certified Web Designer</span>
               </div>
               <div className="flex items-center gap-3">
-                <Check className="w-4 h-4 text-lime" />
+                <Check className="w-4 h-4 text-lime" aria-hidden="true" />
                 <span className="text-sm">Full-Stack Developer</span>
               </div>
             </div>
