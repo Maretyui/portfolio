@@ -74,9 +74,9 @@ export default function Hero({ setActiveSection }: HeroProps) {
               aria-label="Scroll to about section"
             >
               <div className="animate-scroll-fade flex flex-col items-center transition-all duration-300 group-hover:opacity-80 group-hover:translate-y-1">
-                <ChevronDown className="h-8 w-8 text-primary -mb-5 transition-transform duration-300 group-hover:translate-y-1" />
-                <ChevronDown className="h-8 w-8 text-primary -mb-5 transition-transform duration-300 group-hover:translate-y-1" />
-                <ChevronDown className="h-8 w-8 text-primary transition-transform duration-300 group-hover:translate-y-1" />
+                <ChevronDown className="h-8 w-8 text-primary -mb-5 transition-transform duration-300 group-hover:translate-y-1" aria-hidden="true" />
+                <ChevronDown className="h-8 w-8 text-primary -mb-5 transition-transform duration-300 group-hover:translate-y-1" aria-hidden="true" />
+                <ChevronDown className="h-8 w-8 text-primary transition-transform duration-300 group-hover:translate-y-1" aria-hidden="true" />
               </div>
             </button>
           </div>
