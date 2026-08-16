@@ -72,7 +72,7 @@ export default function Contact() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-border/30 text-center text-xs text-muted-foreground">
-          <p>© 2026 Maik Reinhardt. Design & Development. Hamburg, Germany.</p>
+          <p>© {new Date().getFullYear()} Maik Reinhardt. Design & Development. Hamburg, Germany.</p>
         </div>
       </div>
     </section>
