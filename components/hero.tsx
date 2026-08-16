@@ -21,6 +21,7 @@ export default function Hero({ setActiveSection }: HeroProps) {
         <div className="flex flex-col items-center text-center space-y-8">
           <div className="flex items-center justify-center gap-4 flex-wrap">
             {[{
+              // Maik's Discord profile link, not a server invite
               href: "https://discord.com/users/837262476680495104",
               icon: <FaDiscord />,
               label: "Discord"
