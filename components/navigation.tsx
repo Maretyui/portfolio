@@ -35,24 +35,26 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
         <div className="hidden md:flex items-center gap-8">
           <button
             onClick={() => scrollToSection("home")}
+            aria-current={activeSection === "home" ? "page" : undefined}
             className={`text-sm transition-colors flex items-center gap-2 ${
               activeSection === "home"
                 ? "text-cyan"
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
-            <FaHome className="w-4 h-4" />
+            <FaHome className="w-4 h-4" aria-hidden="true" />
             Home
           </button>
           <button
             onClick={() => scrollToSection("contact")}
+            aria-current={activeSection === "contact" ? "page" : undefined}
             className={`text-sm transition-colors flex items-center gap-2 ${
               activeSection === "contact"
                 ? "text-cyan"
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
-            <FaEnvelope className="w-4 h-4" />
+            <FaEnvelope className="w-4 h-4" aria-hidden="true" />
             Contact
           </button>
           <a
@@ -62,7 +64,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
             aria-label="Discord (opens in a new tab)"
             className="text-sm transition-colors flex items-center gap-2 text-muted-foreground hover:text-foreground"
           >
-            <FaDiscord className="w-4 h-4" />
+            <FaDiscord className="w-4 h-4" aria-hidden="true" />
             Discord
           </a>
 
@@ -73,7 +75,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
             aria-label={language === "EN" ? "Switch language to German" : "Sprache auf Englisch umschalten"}
             className="text-sm transition-colors flex items-center gap-2 text-muted-foreground hover:text-foreground"
           >
-            <FaGlobe className="w-4 h-4" />
+            <FaGlobe className="w-4 h-4" aria-hidden="true" />
             {language}
           </button>
         </div>
