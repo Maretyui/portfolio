@@ -214,3 +214,17 @@
 .animate-scroll-fade {
   animation: scroll-fade 2s ease-in-out infinite;
 }
+
+/* Respect the user's OS-level "reduce motion" preference: stop looping/decorative
+   animations and cut transition/animation durations to near-zero instead of disabling
+   interactivity outright. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
