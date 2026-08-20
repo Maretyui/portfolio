@@ -61,7 +61,7 @@ export default function Contact() {
                 aria-label={`${social.name} (opens in a new tab)`}
                 className="p-6 border border-border/30 rounded-xl text-center hover:border-cyan/50 hover:bg-cyan/5 transition-all group duration-200"
                 >
-                <div className="mb-3 flex justify-center transition-transform duration-300 ease-out group-hover:scale-110">{social.icon}</div>
+                <div className="mb-3 flex justify-center transition-transform duration-300 ease-out group-hover:scale-110" aria-hidden="true">{social.icon}</div>
                 <p className="text-sm font-medium text-foreground transition-transform duration-300 ease-out group-hover:scale-[1.05] group-hover:text-cyan">
                 {social.name}
                 </p>

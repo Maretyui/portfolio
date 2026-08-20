@@ -40,7 +40,7 @@ export default function Hero({ setActiveSection }: HeroProps) {
                            transition-all duration-300 ease-out
                            hover:bg-cyan hover:scale-105 hover:shadow-lg"
               >
-                <span className="text-3xl">{icon}</span>
+                <span className="text-3xl" aria-hidden="true">{icon}</span>
               </a>
             ))}
           </div>
