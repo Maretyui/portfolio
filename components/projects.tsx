@@ -82,11 +82,17 @@ export default function Projects() {
             const hoverColor = hoverColors[index] || "text-cyan"
             const isLink = project.link && project.link !== ""
 
+            // Cards without a link (e.g. offline services) render as a <div> instead of
+            // an anchor without href — an href-less <a> isn't keyboard-focusable, so it
+            // shouldn't carry the same clickable-looking hover affordance (border/scale)
+            // as the real project links.
+            const CardTag: "a" | "div" = isLink ? "a" : "div"
+
             return (
-              <a
+              <CardTag
                 key={index}
-                href={isLink ? project.link : undefined}
                 {...(isLink && {
+                  href: project.link,
                   target: "_blank",
                   rel: "noopener noreferrer",
                   "aria-label": `${project.title} (opens in a new tab)`,
@@ -98,7 +104,9 @@ export default function Projects() {
                     return newColors
                   })
                 }
-                className="group block p-8 border border-border/30 rounded-xl hover:border-cyan/50 hover:bg-card/50 hover:scale-[1.02] transition-all duration-300 ease-out"
+                className={`group block p-8 border border-border/30 rounded-xl transition-all duration-300 ease-out ${
+                  isLink ? "hover:border-cyan/50 hover:bg-card/50 hover:scale-[1.02]" : "hover:bg-card/30"
+                }`}
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-12">
                   <div className="flex-1 space-y-4">
@@ -157,7 +165,7 @@ export default function Projects() {
                     </div>
                   )}
                 </div>
-              </a>
+              </CardTag>
             )
           })}
         </div>
