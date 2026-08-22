@@ -28,7 +28,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-4 flex justify-between items-center">
         <button
           onClick={() => scrollToSection("home")}
-          className="text-lg md:text-xl font-bold tracking-tight hover:text-cyan transition-colors"
+          className="text-lg md:text-xl font-bold tracking-tight hover:text-cyan transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:rounded-md"
         >
           Maik Reinhardt
         </button>
@@ -36,7 +36,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
           <button
             onClick={() => scrollToSection("home")}
             aria-current={activeSection === "home" ? "page" : undefined}
-            className={`text-sm transition-colors flex items-center gap-2 ${
+            className={`text-sm transition-colors flex items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:rounded-md ${
               activeSection === "home"
                 ? "text-cyan"
                 : "text-muted-foreground hover:text-foreground"
@@ -48,7 +48,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
           <button
             onClick={() => scrollToSection("contact")}
             aria-current={activeSection === "contact" ? "page" : undefined}
-            className={`text-sm transition-colors flex items-center gap-2 ${
+            className={`text-sm transition-colors flex items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:rounded-md ${
               activeSection === "contact"
                 ? "text-cyan"
                 : "text-muted-foreground hover:text-foreground"
@@ -62,7 +62,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Discord (opens in a new tab)"
-            className="text-sm transition-colors flex items-center gap-2 text-muted-foreground hover:text-foreground"
+            className="text-sm transition-colors flex items-center gap-2 text-muted-foreground hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:rounded-md"
           >
             <FaDiscord className="w-4 h-4" aria-hidden="true" />
             Discord
@@ -73,7 +73,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
           <button
             onClick={toggleLanguage}
             aria-label={language === "EN" ? "Switch language to German" : "Sprache auf Englisch umschalten"}
-            className="text-sm transition-colors flex items-center gap-2 text-muted-foreground hover:text-foreground"
+            className="text-sm transition-colors flex items-center gap-2 text-muted-foreground hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:rounded-md"
           >
             <FaGlobe className="w-4 h-4" aria-hidden="true" />
             {language}
