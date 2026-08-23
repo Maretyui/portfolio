@@ -7,16 +7,42 @@ import "./globals.css"
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
+const SITE_TITLE = "Maretyui | Maik Reinhardt"
+const SITE_DESCRIPTION =
+  "Portfolio website of Maik Reinhardt, showcasing projects and skills in web development and design as well as swimming and diving."
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://maretyui.com"),
-  title: "Maretyui | Maik Reinhardt",
-  description:
-    "Portfolio website of Maik Reinhardt, showcasing projects and skills in web development and design as well as swimming and diving.",
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  keywords: [
+    "Maik Reinhardt",
+    "Maretyui",
+    "Web Design",
+    "Web Development",
+    "Next.js",
+    "Portfolio",
+    "Hamburg",
+    "Swimming Instructor",
+  ],
   icons: {
     icon: "/favicon.ico",
   },
   alternates: {
     canonical: "/",
+  },
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: "/",
+    siteName: "Maretyui",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
   formatDetection: {
     telephone: false,
