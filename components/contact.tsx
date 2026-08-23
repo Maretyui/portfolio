@@ -26,7 +26,7 @@ export default function Contact() {
                 href="mailto:hello@maretyui.com"
                 className="flex items-center gap-3 text-foreground hover:text-cyan transition-colors group"
               >
-                <FaRegEnvelope className="w-4.5 h-4.5" />
+                <FaRegEnvelope className="w-4.5 h-4.5" aria-hidden="true" />
                 <span className="font-medium group-hover:underline">hello@maretyui.com</span>
               </a>
 
@@ -34,7 +34,7 @@ export default function Contact() {
                 href="tel:+4917646644971"
                 className="flex items-center gap-3 text-foreground hover:text-cyan transition-colors group"
               >
-                <FaPhoneAlt className="w-4.5 h-4.5" />
+                <FaPhoneAlt className="w-4.5 h-4.5" aria-hidden="true" />
                 <span className="font-medium group-hover:underline">+49 (0) 176 466 44971</span>
               </a>
 
