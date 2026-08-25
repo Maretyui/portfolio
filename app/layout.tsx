@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
@@ -47,6 +47,13 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
+}
+
+// The site only ever renders in dark mode (see the "dark" class on <html>
+// below), so a single theme-color is enough - no need for a
+// prefers-color-scheme media pair.
+export const viewport: Viewport = {
+  themeColor: "#08080a",
 }
 
 export default function RootLayout({
