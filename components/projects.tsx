@@ -128,6 +128,7 @@ export default function Projects() {
                         text-base text-muted-foreground leading-relaxed
                         md:opacity-0 md:translate-y-3
                         md:group-hover:opacity-100 md:group-hover:translate-y-0
+                        md:group-focus-visible:opacity-100 md:group-focus-visible:translate-y-0
                         md:transition-all md:duration-500
                       `}
                     >
