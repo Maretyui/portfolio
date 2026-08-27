@@ -104,7 +104,7 @@ export default function Projects() {
                     return newColors
                   })
                 }
-                className={`group block p-8 border border-border/30 rounded-xl transition-all duration-300 ease-out ${
+                className={`group block p-8 border border-border/30 rounded-xl transition-all duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan ${
                   isLink ? "hover:border-cyan/50 hover:bg-card/50 hover:scale-[1.02]" : "hover:bg-card/30"
                 }`}
               >
