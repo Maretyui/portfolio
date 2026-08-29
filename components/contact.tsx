@@ -59,10 +59,10 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${social.name} (opens in a new tab)`}
-                className="p-6 border border-border/30 rounded-xl text-center hover:border-cyan/50 hover:bg-cyan/5 transition-all group duration-200"
+                className="p-6 border border-border/30 rounded-xl text-center hover:border-cyan/50 hover:bg-cyan/5 focus-visible:border-cyan/50 focus-visible:bg-cyan/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan transition-all group duration-200"
                 >
-                <div className="mb-3 flex justify-center transition-transform duration-300 ease-out group-hover:scale-110" aria-hidden="true">{social.icon}</div>
-                <p className="text-sm font-medium text-foreground transition-transform duration-300 ease-out group-hover:scale-[1.05] group-hover:text-cyan">
+                <div className="mb-3 flex justify-center transition-transform duration-300 ease-out group-hover:scale-110 group-focus-visible:scale-110" aria-hidden="true">{social.icon}</div>
+                <p className="text-sm font-medium text-foreground transition-transform duration-300 ease-out group-hover:scale-[1.05] group-hover:text-cyan group-focus-visible:scale-[1.05] group-focus-visible:text-cyan">
                 {social.name}
                 </p>
                 </a>
