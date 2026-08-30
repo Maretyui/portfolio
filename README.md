@@ -11,7 +11,7 @@ My personal developer portfolio — source for a previous version of [maretyui.c
 
 ## Content
 
-`components/navigation.tsx` is the fixed top nav with an EN/DE language toggle; `components/hero.tsx`, `components/skills.tsx`, `components/projects.tsx`, and `components/contact.tsx` are the homepage sections, stacked and scrolled to via the nav's section-jump buttons.
+`components/navigation.tsx` is the fixed top nav with an EN/DE language toggle. The homepage sections are stacked in this order and scrolled to via the nav's section-jump buttons: `components/hero.tsx`, `components/services.tsx`, `components/about.tsx`, `components/skills.tsx`, `components/projects.tsx`, and `components/contact.tsx`.
 
 ## Accessibility
 
