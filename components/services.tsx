@@ -44,9 +44,9 @@ export default function Services() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div
-              key={index}
+              key={service.title}
               className="p-8 rounded-2xl border border-border/40 bg-background/40 shadow-sm backdrop-blur-sm transition-all"
             >
               <div className="mb-4" aria-hidden="true">{service.icon}</div>

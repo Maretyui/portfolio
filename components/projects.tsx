@@ -90,7 +90,7 @@ export default function Projects() {
 
             return (
               <CardTag
-                key={index}
+                key={project.title}
                 {...(isLink && {
                   href: project.link,
                   target: "_blank",
