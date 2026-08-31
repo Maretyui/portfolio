@@ -73,8 +73,6 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
             Discord
           </a>
 
-
-
           <button
             onClick={toggleLanguage}
             aria-label={language === "EN" ? "Switch language to German" : "Sprache auf Englisch umschalten"}
