@@ -51,7 +51,7 @@ export default function Contact() {
               {[
                 { name: "GitHub", icon: <FaGithub className="text-3xl" />, url: "https://github.com/maretyui" },
                 { name: "Discord", icon: <FaDiscord className="text-3xl" />, url: "https://discord.com/users/837262476680495104" },
-                { name: "Whatsapp", icon: <FaWhatsapp className="text-3xl" />, url: "https://wa.me/+4917646644971?text=Hey%20Maretyui,%20" },
+                { name: "WhatsApp", icon: <FaWhatsapp className="text-3xl" />, url: "https://wa.me/+4917646644971?text=Hey%20Maretyui,%20" },
               ].map((social) => (
                 <a
                 key={social.name}
