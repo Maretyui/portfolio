@@ -24,7 +24,7 @@ export default function Contact() {
             <div className="space-y-4 pt-4">
               <a
                 href="mailto:hello@maretyui.com"
-                className="flex items-center gap-3 text-foreground hover:text-cyan transition-colors group"
+                className="flex items-center gap-3 text-foreground hover:text-cyan transition-colors group focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:rounded-md"
               >
                 <FaRegEnvelope className="w-4.5 h-4.5" aria-hidden="true" />
                 <span className="font-medium group-hover:underline">hello@maretyui.com</span>
@@ -32,7 +32,7 @@ export default function Contact() {
 
               <a
                 href="tel:+4917646644971"
-                className="flex items-center gap-3 text-foreground hover:text-cyan transition-colors group"
+                className="flex items-center gap-3 text-foreground hover:text-cyan transition-colors group focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:rounded-md"
               >
                 <FaPhoneAlt className="w-4.5 h-4.5" aria-hidden="true" />
                 <span className="font-medium group-hover:underline">+49 (0) 176 466 44971</span>
