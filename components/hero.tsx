@@ -38,7 +38,8 @@ export default function Hero({ setActiveSection }: HeroProps) {
                 aria-label={`${label} (opens in a new tab)`}
                 className="w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center
                            transition-all duration-300 ease-out
-                           hover:bg-cyan hover:scale-105 hover:shadow-lg"
+                           hover:bg-cyan hover:scale-105 hover:shadow-lg
+                           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
               >
                 <span className="text-3xl" aria-hidden="true">{icon}</span>
               </a>
