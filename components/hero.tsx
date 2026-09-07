@@ -29,9 +29,9 @@ export default function Hero({ setActiveSection }: HeroProps) {
               href: "https://github.com/maretyui",
               icon: <FaGithub />,
               label: "GitHub"
-            }].map(({ href, icon, label }, idx) => (
+            }].map(({ href, icon, label }) => (
               <a
-                key={idx}
+                key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
