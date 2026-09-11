@@ -13,14 +13,20 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("home")
 
   return (
-    <main id="main-content" className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-background text-foreground">
       <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
-      <Hero setActiveSection={setActiveSection} />
-      <Services />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      {/* layout.tsx's "Skip to main content" link targets this id - it needs
+          to sit after Navigation, not on <main> itself (which wraps
+          Navigation too), otherwise "skipping" the nav lands you right back
+          at its own top instead of past it. */}
+      <div id="main-content">
+        <Hero setActiveSection={setActiveSection} />
+        <Services />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </div>
     </main>
   )
 }
