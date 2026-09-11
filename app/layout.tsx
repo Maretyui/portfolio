@@ -44,8 +44,14 @@ export const metadata: Metadata = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
   },
+  // Contact info (mailto/tel links, "Hamburg, Germany") is already presented
+  // deliberately in contact.tsx - disable auto-detection across the board so
+  // mobile browsers don't independently reformat/relink plain text elsewhere
+  // on the page, not just phone numbers.
   formatDetection: {
     telephone: false,
+    email: false,
+    address: false,
   },
 }
 
