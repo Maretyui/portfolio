@@ -69,7 +69,7 @@ export default function Hero({ setActiveSection }: HeroProps) {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-6">
+          <div className="pt-6">
             <button
               onClick={scrollToAbout}
               className="mt-16 flex flex-col items-center cursor-pointer group"
