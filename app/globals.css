@@ -125,38 +125,8 @@
   }
 }
 
-@keyframes smoothScale {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.05);
-  }
-}
-
-@keyframes slideRight {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(4px);
-  }
-}
-
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out;
-}
-
-.animate-smooth-scale {
-  animation: smoothScale 0.3s ease-in-out;
-}
-
-.animate-slide-right {
-  animation: slideRight 0.3s ease-out;
-}
-
-.group:hover .group-hover\:animate-slide-right {
-  animation: slideRight 0.3s ease-out;
 }
 
 .hover\:scale-105:hover {
