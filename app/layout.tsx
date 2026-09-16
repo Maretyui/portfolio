@@ -62,6 +62,18 @@ export const viewport: Viewport = {
   themeColor: "#08080a",
 }
 
+// Lets search engines render Maik as a known entity (e.g. a knowledge-panel-
+// style result) instead of just an unstructured page of text.
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Maik Reinhardt",
+  alternateName: "Maretyui",
+  url: "https://maretyui.com",
+  jobTitle: ["Web Designer", "Web Developer", "Swimming Instructor"],
+  sameAs: ["https://github.com/maretyui", "https://discord.com/users/837262476680495104"],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -70,6 +82,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark ${geist.variable} ${geistMono.variable}`}>
       <body className={`font-sans antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-md focus:bg-background focus:px-4 focus:py-2 focus:text-foreground focus:outline focus:outline-2 focus:outline-cyan"
