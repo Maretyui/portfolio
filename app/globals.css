@@ -165,6 +165,13 @@
   animation: scroll-fade 2s ease-in-out infinite;
 }
 
+/* Match the browser's text-selection highlight to the theme instead of leaving
+   the OS default blue, which clashes with the rest of the palette. */
+::selection {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
 /* Respect the user's OS-level "reduce motion" preference: stop looping/decorative
    animations and cut transition/animation durations to near-zero instead of disabling
    interactivity outright. */
