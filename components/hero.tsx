@@ -11,7 +11,8 @@ export default function Hero({ setActiveSection }: HeroProps) {
     setActiveSection("about")
     const element = document.getElementById("about")
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      element.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" })
     }
   }
 
