@@ -57,9 +57,13 @@ export const metadata: Metadata = {
 
 // The site only ever renders in dark mode (see the "dark" class on <html>
 // below), so a single theme-color is enough - no need for a
-// prefers-color-scheme media pair.
+// prefers-color-scheme media pair. colorScheme tells the browser itself the
+// page is dark-only, so native UI it renders (scrollbars, form controls,
+// the pull-to-refresh spinner on mobile) matches instead of defaulting to
+// light chrome around a dark page.
 export const viewport: Viewport = {
   themeColor: "#08080a",
+  colorScheme: "dark",
 }
 
 // Lets search engines render Maik as a known entity (e.g. a knowledge-panel-
