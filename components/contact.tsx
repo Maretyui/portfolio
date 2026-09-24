@@ -21,7 +21,7 @@ export default function Contact() {
               tech, I'd love to hear from you.
             </p>
 
-            <div className="space-y-4 pt-4">
+            <address className="space-y-4 pt-4 not-italic">
               <a
                 href="mailto:hello@maretyui.com"
                 className="flex items-center gap-3 text-foreground hover:text-cyan transition-colors group focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:rounded-md"
@@ -41,7 +41,7 @@ export default function Contact() {
               <div>
                 <p className="text-sm text-muted-foreground mb-3">Hamburg, Germany</p>
               </div>
-            </div>
+            </address>
           </div>
 
           <div className="space-y-8">
