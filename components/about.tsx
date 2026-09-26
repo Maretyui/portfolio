@@ -4,12 +4,12 @@ import { Check } from "lucide-react"
 
 export default function About() {
   return (
-    <section id="about" className="py-20 md:py-32 px-4 md:px-8">
+    <section id="about" aria-labelledby="about-heading" className="py-20 md:py-32 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <h2 id="about-heading" className="text-4xl md:text-5xl font-bold mb-4">
                 <span className="text-cyan">About</span>
                 <span className="text-foreground ml-3">Me</span>
               </h2>

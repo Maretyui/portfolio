@@ -4,12 +4,12 @@ import { FaGithub, FaDiscord, FaWhatsapp, FaRegEnvelope, FaPhoneAlt } from "reac
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 md:py-32 px-4 md:px-8 bg-card/30">
+    <section id="contact" aria-labelledby="contact-heading" className="py-20 md:py-32 px-4 md:px-8 bg-card/30">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <h2 id="contact-heading" className="text-4xl md:text-5xl font-bold mb-4">
                 <span className="text-foreground">Let's</span>
                 <span className="text-cyan ml-3">Connect</span>
               </h2>
