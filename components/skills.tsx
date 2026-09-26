@@ -20,10 +20,10 @@ export default function Skills() {
   ]
 
   return (
-    <section id="skills" className="py-20 md:py-32 px-4 md:px-8 bg-card/30">
+    <section id="skills" aria-labelledby="skills-heading" className="py-20 md:py-32 px-4 md:px-8 bg-card/30">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 id="skills-heading" className="text-3xl md:text-5xl font-bold mb-4">
             <span className="text-yellow">Tech</span>
             <span className="text-foreground ml-3">Stack</span>
           </h2>

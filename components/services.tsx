@@ -31,10 +31,14 @@ export default function Services() {
   ]
 
   return (
-    <section id="services" className="py-20 md:py-32 px-4 md:px-8 bg-card/50">
+    <section
+      id="services"
+      aria-labelledby="services-heading"
+      className="py-20 md:py-32 px-4 md:px-8 bg-card/50"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 id="services-heading" className="text-3xl md:text-4xl font-bold">
             <span className="text-purple">My</span>
             <span className="text-foreground ml-2">Life</span>
           </h2>
