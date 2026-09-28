@@ -7,6 +7,18 @@ export const metadata: Metadata = {
     index: false,
     follow: true,
   },
+  // Without these, a shared link to this page unfurled with the root
+  // layout's "Maretyui | Maik Reinhardt" OG/Twitter title and description
+  // instead of anything 404-specific, since Next.js otherwise inherits the
+  // root layout's full objects wholesale.
+  openGraph: {
+    title: "404 – Page Not Found",
+    description: "This page doesn't exist, or it moved.",
+  },
+  twitter: {
+    title: "404 – Page Not Found",
+    description: "This page doesn't exist, or it moved.",
+  },
 }
 
 // Next.js falls back to its own generic, unstyled 404 page without this
