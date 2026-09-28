@@ -17,7 +17,7 @@ export default function Hero({ setActiveSection }: HeroProps) {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-24 px-4 md:px-8">
+    <section id="home" aria-labelledby="hero-heading" className="min-h-screen flex items-center justify-center pt-24 px-4 md:px-8">
       <div className="max-w-5xl mx-auto w-full">
         <div className="flex flex-col items-center text-center space-y-8">
           <div className="flex items-center justify-center gap-4 flex-wrap">
@@ -53,7 +53,7 @@ export default function Hero({ setActiveSection }: HeroProps) {
                             hover:text-foreground">
                 Welcome to my portfolio
               </p>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight">
+              <h1 id="hero-heading" className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight">
                 <span className="block text-purple transition-transform duration-300 ease-out hover:-rotate-2">Designing</span>
                 <span className="block text-lime transition-transform duration-300 ease-out hover:rotate-2">Swimming</span>
                 <span className="block">
