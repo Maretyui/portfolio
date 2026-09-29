@@ -51,7 +51,7 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="p-8 rounded-2xl border border-border/40 bg-background/40 shadow-sm backdrop-blur-sm transition-all"
+              className="p-8 rounded-2xl border border-border/40 bg-background/40 shadow-sm backdrop-blur-sm transition-all hover:border-cyan/50 hover:bg-card/50"
             >
               <div className="mb-4" aria-hidden="true">{service.icon}</div>
               <h3 className="text-xl font-semibold mb-3 text-foreground">
