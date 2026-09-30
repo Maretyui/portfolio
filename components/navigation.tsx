@@ -74,9 +74,13 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
             Discord
           </a>
 
+          {/* Decorative only for now — toggles this local label but no page
+              content is actually translated yet. The aria-label is phrased
+              to match, so assistive tech isn't told an action happens that
+              doesn't. */}
           <button
             onClick={toggleLanguage}
-            aria-label={language === "EN" ? "Switch language to German" : "Sprache auf Englisch umschalten"}
+            aria-label={language === "EN" ? "Show language label as German (display only)" : "Sprachanzeige auf Englisch umschalten (nur Anzeige)"}
             className="text-sm transition-colors flex items-center gap-2 text-muted-foreground hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:rounded-md"
           >
             <FaGlobe className="w-4 h-4" aria-hidden="true" />
