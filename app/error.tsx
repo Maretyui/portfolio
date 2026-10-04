@@ -1,14 +1,21 @@
 "use client"
 
+import { useEffect } from "react"
+
 // Next.js falls back to its own generic, unstyled error screen without
 // this file - mirrors not-found.tsx so a runtime error stays visually
 // consistent with the rest of the site instead of a blank default.
 export default function Error({
+  error,
   reset,
 }: {
   error: Error & { digest?: string }
   reset: () => void
 }) {
+  useEffect(() => {
+    console.error(error)
+  }, [error])
+
   return (
     <main className="min-h-screen bg-background text-foreground flex items-center justify-center px-4">
       <div className="max-w-md w-full text-center space-y-6">
