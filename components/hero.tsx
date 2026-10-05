@@ -73,7 +73,8 @@ export default function Hero({ setActiveSection }: HeroProps) {
           <div className="pt-6">
             <button
               onClick={scrollToAbout}
-              className="mt-16 flex flex-col items-center cursor-pointer group"
+              className="mt-16 flex flex-col items-center cursor-pointer group
+                         focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
               aria-label="Scroll to about section"
             >
               <div className="animate-scroll-fade flex flex-col items-center transition-all duration-300 group-hover:opacity-80 group-hover:translate-y-1">
