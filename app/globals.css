@@ -185,3 +185,17 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Most focus styles here are a Tailwind outline/ring utility applied
+   per-element rather than a global default, so this adds a guaranteed
+   outline on every focused element plus thicker link underlines for
+   visitors who've asked the OS for extra contrast. */
+@media (prefers-contrast: more) {
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+  a {
+    text-decoration-thickness: 2px;
+  }
+}
