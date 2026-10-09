@@ -199,3 +199,11 @@
     text-decoration-thickness: 2px;
   }
 }
+
+/* The nav bar is fixed and overlaps the top of the page, so both its own
+   scrollIntoView() clicks and a plain #section deep link land a section's
+   heading right underneath it. scroll-margin-top keeps every section clear
+   of the nav for both cases. */
+section[id] {
+  scroll-margin-top: 5rem;
+}
