@@ -13,6 +13,8 @@ My personal developer portfolio — source for a previous version of [maretyui.c
 
 `components/navigation.tsx` is the fixed top nav with an EN/DE language toggle. It only has jump buttons for Home and Contact — the sections in between (`components/services.tsx`, `components/about.tsx`, `components/skills.tsx`, `components/projects.tsx`) have no nav entry of their own and are reached by scrolling past Hero on the way to Contact, in that stacked order.
 
+`components/contact.tsx` holds the actual contact details shown at the bottom of that scroll (email, phone, Hamburg location) alongside social links to GitHub, Discord and WhatsApp.
+
 Note: the language toggle only flips the `EN`/`DE` label shown in the nav — no translated copy exists anywhere in the site, so it has no visible effect beyond that label. Worth knowing before assuming it's broken; it was never wired up to actual content.
 
 ## Accessibility
