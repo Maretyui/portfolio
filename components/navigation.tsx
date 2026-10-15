@@ -28,6 +28,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/20">
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-4 flex flex-wrap justify-between items-center gap-x-4 gap-y-2">
         <button
+          type="button"
           onClick={() => scrollToSection("home")}
           className="text-lg md:text-xl font-bold tracking-tight hover:text-cyan transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:rounded-md"
         >
@@ -40,6 +41,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
             narrow screens instead of squeezing next to the name button. */}
         <div className="flex flex-wrap items-center gap-4 md:gap-8">
           <button
+            type="button"
             onClick={() => scrollToSection("home")}
             aria-current={activeSection === "home" ? "page" : undefined}
             className={`text-sm transition-colors flex items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:rounded-md ${
@@ -52,6 +54,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
             Home
           </button>
           <button
+            type="button"
             onClick={() => scrollToSection("contact")}
             aria-current={activeSection === "contact" ? "page" : undefined}
             className={`text-sm transition-colors flex items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:rounded-md ${
@@ -79,6 +82,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
               to match, so assistive tech isn't told an action happens that
               doesn't. */}
           <button
+            type="button"
             onClick={toggleLanguage}
             aria-label={language === "EN" ? "Show language label as German (display only)" : "Sprachanzeige auf Englisch umschalten (nur Anzeige)"}
             className="text-sm transition-colors flex items-center gap-2 text-muted-foreground hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:rounded-md"
