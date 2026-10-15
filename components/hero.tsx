@@ -72,6 +72,7 @@ export default function Hero({ setActiveSection }: HeroProps) {
 
           <div className="pt-6">
             <button
+              type="button"
               onClick={scrollToAbout}
               className="mt-16 flex flex-col items-center cursor-pointer group
                          focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
