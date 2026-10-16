@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
+import Link from "next/link"
 
 // Next.js falls back to its own generic, unstyled error screen without
 // this file - mirrors not-found.tsx so a runtime error stays visually
@@ -24,13 +25,21 @@ export default function Error({
         <p className="text-base text-muted-foreground leading-relaxed">
           An unexpected error occurred. You can try again, or head back to the homepage.
         </p>
-        <button
-          type="button"
-          onClick={() => reset()}
-          className="inline-flex items-center justify-center rounded-full bg-foreground text-background px-6 py-3 font-medium transition-all duration-300 hover:bg-cyan hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
-        >
-          Try again
-        </button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            type="button"
+            onClick={() => reset()}
+            className="inline-flex items-center justify-center rounded-full bg-foreground text-background px-6 py-3 font-medium transition-all duration-300 hover:bg-cyan hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
+          >
+            Try again
+          </button>
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center rounded-full border border-foreground/30 px-6 py-3 font-medium transition-all duration-300 hover:border-cyan hover:text-cyan focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
+          >
+            Back to homepage
+          </Link>
+        </div>
       </div>
     </main>
   )
