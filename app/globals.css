@@ -150,6 +150,10 @@
   color: #84cc16;
 }
 
+.text-pink {
+  color: #ec4899;
+}
+
 @keyframes scroll-fade {
   0% {
     transform: translateY(0);
