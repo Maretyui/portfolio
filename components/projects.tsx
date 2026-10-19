@@ -3,17 +3,10 @@
 import { useState, useEffect } from "react"
 
 export default function Projects() {
-  const colors = [
-    "text-cyan",
-    "text-lime",
-    "text-pink-400",
-    "text-purple-400",
-    "text-emerald-400",
-    "text-orange-400",
-    "text-blue-400",
-    "text-rose-400",
-    "text-teal-400",
-  ]
+  // Kept to the site's own brand palette (globals.css) rather than mixing in
+  // generic Tailwind shades, so the random hover color always matches the
+  // same five colors used for the hero, services and skills sections.
+  const colors = ["text-cyan", "text-lime", "text-purple", "text-yellow", "text-pink"]
 
   function getRandomColor() {
     return colors[Math.floor(Math.random() * colors.length)]
