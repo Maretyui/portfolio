@@ -207,7 +207,15 @@
 /* The nav bar is fixed and overlaps the top of the page, so both its own
    scrollIntoView() clicks and a plain #section deep link land a section's
    heading right underneath it. scroll-margin-top keeps every section clear
-   of the nav for both cases. */
+   of the nav for both cases. Below md the nav's flex-wrap can push it onto
+   two rows (brand name + links), so it needs extra clearance there; at
+   md+ it's always a single row. */
 section[id] {
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 7rem;
+}
+
+@media (min-width: 768px) {
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
 }
