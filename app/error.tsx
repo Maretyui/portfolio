@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import Link from "next/link"
 
 // Next.js falls back to its own generic, unstyled error screen without
@@ -13,15 +13,29 @@ export default function Error({
   error: Error & { digest?: string }
   reset: () => void
 }) {
+  const headingRef = useRef<HTMLHeadingElement>(null)
+
   useEffect(() => {
     console.error(error)
+    // Unlike not-found.tsx, this boundary swaps in without a route change
+    // or title update, so there's no normal cue for assistive tech that
+    // something happened - move focus to the heading so it gets announced.
+    headingRef.current?.focus()
   }, [error])
 
   return (
     <main className="min-h-screen bg-background text-foreground flex items-center justify-center px-4">
       <div className="max-w-md w-full text-center space-y-6">
-        <p className="text-6xl md:text-7xl font-bold text-cyan">Oops</p>
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Something Went Wrong</h1>
+        <div role="alert">
+          <p className="text-6xl md:text-7xl font-bold text-cyan">Oops</p>
+          <h1
+            ref={headingRef}
+            tabIndex={-1}
+            className="text-3xl md:text-4xl font-bold tracking-tight outline-none"
+          >
+            Something Went Wrong
+          </h1>
+        </div>
         <p className="text-base text-muted-foreground leading-relaxed">
           An unexpected error occurred. You can try again, or head back to the homepage.
         </p>

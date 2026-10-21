@@ -21,6 +21,8 @@ Note: the language toggle only flips the `EN`/`DE` label shown in the nav — no
 
 Icon-only links (social icons, language toggle) carry descriptive `aria-label`s, and the nav's active section is exposed via `aria-current="page"`. Project cards in `components/projects.tsx` reveal their description text on hover on desktop; a `group-focus-visible` counterpart to the `group-hover` classes ensures keyboard-only users see the same content when tabbing to a card, not just mouse users.
 
+`app/error.tsx` wraps its heading in a `role="alert"` region and moves focus to it on mount — this boundary swaps in without a route change or title update, so without that there's no normal cue for assistive tech that something happened.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
