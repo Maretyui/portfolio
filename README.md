@@ -23,6 +23,10 @@ Icon-only links (social icons, language toggle) carry descriptive `aria-label`s,
 
 `app/error.tsx` wraps its heading in a `role="alert"` region and moves focus to it on mount — this boundary swaps in without a route change or title update, so without that there's no normal cue for assistive tech that something happened.
 
+## Metadata & SEO
+
+`app/icon.tsx`, `app/apple-icon.tsx` and `app/opengraph-image.tsx` are Next.js file-convention routes — they generate the favicon, home-screen icon, and social-share preview image respectively, and aren't referenced anywhere in `layout.tsx`'s `metadata` object because Next.js picks them up automatically by file name. `app/sitemap.ts` and `app/robots.ts` work the same way for `/sitemap.xml` and `/robots.txt`.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
