@@ -17,6 +17,8 @@ My personal developer portfolio — source for a previous version of [maretyui.c
 
 Note: the language toggle only flips the `EN`/`DE` label shown in the nav — no translated copy exists anywhere in the site, so it has no visible effect beyond that label. Worth knowing before assuming it's broken; it was never wired up to actual content.
 
+`app/error.tsx` only catches failures below the root layout — a failure while rendering `app/layout.tsx` itself (e.g. the font loader) falls through to Next's bare default error screen instead. `app/global-error.tsx` covers that one remaining case; it has to recreate the `<html>`/`<body>` shell (including the `dark` class the site's CSS variables depend on) that `layout.tsx` normally provides, and its home link is a plain `<a>` rather than `next/link`, since the app router state `Link` depends on is exactly what may have failed to initialize here.
+
 ## Accessibility
 
 Icon-only links (social icons, language toggle) carry descriptive `aria-label`s, and the nav's active section is exposed via `aria-current="page"`. Project cards in `components/projects.tsx` reveal their description text on hover on desktop; a `group-focus-visible` counterpart to the `group-hover` classes ensures keyboard-only users see the same content when tabbing to a card, not just mouse users.
