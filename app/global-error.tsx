@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useRef } from "react"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 
@@ -18,6 +19,16 @@ export default function GlobalError({
   error: Error & { digest?: string }
   reset: () => void
 }) {
+  const headingRef = useRef<HTMLHeadingElement>(null)
+
+  // Mirrors error.tsx: this boundary swaps in the whole document without a
+  // route change or title update, so there's no normal cue for assistive
+  // tech that something happened - move focus to the heading so it gets
+  // announced.
+  useEffect(() => {
+    headingRef.current?.focus()
+  }, [])
+
   return (
     <html lang="en" className={`dark ${geist.variable} ${geistMono.variable}`}>
       <body className="font-sans antialiased bg-background text-foreground">
@@ -25,7 +36,11 @@ export default function GlobalError({
           <div className="max-w-md w-full text-center space-y-6">
             <div role="alert">
               <p className="text-6xl md:text-7xl font-bold text-cyan">Oops</p>
-              <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+              <h1
+                ref={headingRef}
+                tabIndex={-1}
+                className="text-3xl md:text-4xl font-bold tracking-tight outline-none"
+              >
                 Something Went Wrong
               </h1>
             </div>
