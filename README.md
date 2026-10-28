@@ -33,6 +33,8 @@ The site's five brand accent colors (cyan/yellow/purple/lime/pink) are registere
 
 `app/icon.tsx`, `app/apple-icon.tsx` and `app/opengraph-image.tsx` are Next.js file-convention routes — they generate the favicon, home-screen icon, and social-share preview image respectively, and aren't referenced anywhere in `layout.tsx`'s `metadata` object because Next.js picks them up automatically by file name. `app/sitemap.ts` and `app/robots.ts` work the same way for `/sitemap.xml` and `/robots.txt`.
 
+`app/manifest.ts` is served at `/manifest.webmanifest` (auto-linked in `<head>`) and gives the site a PWA identity — name, theme/background color, and an icon list reusing `icon.tsx`'s generated PNG (once with `purpose: "any"`, once with `purpose: "maskable"` for Android's adaptive-icon system, since the manifest type only accepts one purpose per entry). Works under this project's `output: 'export'` setting the same way `icon.tsx`/`apple-icon.tsx` already do — Next prerenders it to a static file at build time.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
