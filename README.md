@@ -25,6 +25,8 @@ Icon-only links (social icons, language toggle) carry descriptive `aria-label`s,
 
 `app/error.tsx` wraps its heading in a `role="alert"` region and moves focus to it on mount — this boundary swaps in without a route change or title update, so without that there's no normal cue for assistive tech that something happened.
 
+The site's five brand accent colors (cyan/yellow/purple/lime/pink) are registered as real `--color-*` entries in `app/globals.css`'s `@theme inline` block rather than plain one-off classes — Tailwind only generates a utility for a given variant (`hover:`, `focus-visible:`, `group-hover:`, opacity modifiers like `bg-cyan/10`, gradient stops like `from-cyan`) when the color name matches an actual theme key, so a bare custom class only ever covered the unprefixed case.
+
 `app/globals.css` also has a `forced-colors: active` block for Windows High Contrast Mode (and other forced-colors user agents), which swaps in a user-chosen system palette rather than just boosting contrast like `prefers-contrast` does — it pins the focus ring and selection highlight to the `CanvasText`/`Highlight`/`HighlightText` system color keywords so both stay visible under forced colors.
 
 ## Metadata & SEO
