@@ -7,8 +7,10 @@ import "./globals.css"
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" })
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" })
 
-const SITE_TITLE = "Maretyui | Maik Reinhardt"
-const SITE_DESCRIPTION =
+// Exported so manifest.ts can read the same strings instead of carrying its
+// own hand-synced copies that could drift from the metadata below.
+export const SITE_TITLE = "Maretyui | Maik Reinhardt"
+export const SITE_DESCRIPTION =
   "Portfolio website of Maik Reinhardt, showcasing projects and skills in web development and design as well as swimming and diving."
 
 export const metadata: Metadata = {

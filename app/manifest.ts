@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next"
+import { SITE_TITLE, SITE_DESCRIPTION } from "./layout"
 
 // No applicationName/appleWebApp metadata exists in layout.tsx yet, so this
 // manifest is the only source these fields have — Next.js auto-serves it at
@@ -7,10 +8,9 @@ import type { MetadataRoute } from "next"
 // apple-icon.tsx, Next prerenders this file-convention route to a static file.
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Maretyui | Maik Reinhardt",
+    name: SITE_TITLE,
     short_name: "Maretyui",
-    description:
-      "Portfolio website of Maik Reinhardt, showcasing projects and skills in web development and design as well as swimming and diving.",
+    description: SITE_DESCRIPTION,
     id: "/",
     start_url: "/",
     scope: "/",
