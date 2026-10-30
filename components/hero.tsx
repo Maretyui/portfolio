@@ -1,6 +1,7 @@
 "use client"
 import { ChevronDown } from "lucide-react"
 import { FaDiscord, FaGithub } from "react-icons/fa"
+import { scrollToId } from "@/lib/utils"
 
 interface HeroProps {
   setActiveSection: (section: string) => void
@@ -9,11 +10,7 @@ interface HeroProps {
 export default function Hero({ setActiveSection }: HeroProps) {
   const scrollToAbout = () => {
     setActiveSection("about")
-    const element = document.getElementById("about")
-    if (element) {
-      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-      element.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" })
-    }
+    scrollToId("about")
   }
 
   return (

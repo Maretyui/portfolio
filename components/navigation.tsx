@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { FaHome, FaDiscord, FaGlobe, FaEnvelope } from "react-icons/fa"
+import { scrollToId } from "@/lib/utils"
 
 interface NavigationProps {
   activeSection: string
@@ -13,11 +14,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId)
-    const element = document.getElementById(sectionId)
-    if (element) {
-      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-      element.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" })
-    }
+    scrollToId(sectionId)
   }
 
   const toggleLanguage = () => {
