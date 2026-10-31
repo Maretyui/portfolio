@@ -30,6 +30,8 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  authors: [{ name: "Maik Reinhardt", url: "https://maretyui.com" }],
+  creator: "Maik Reinhardt",
   alternates: {
     canonical: "/",
   },
