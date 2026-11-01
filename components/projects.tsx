@@ -116,14 +116,19 @@ export default function Projects() {
                       {project.category}
                     </p>
 
+                    {/* Non-link cards render as a <div>, which can't take keyboard
+                        focus — reveal-on-hover-or-focus would mean no keyboard user
+                        ever sees this description, so only link cards get the effect. */}
                     <p
-                      className={`
-                        text-base text-muted-foreground leading-relaxed
+                      className={
+                        isLink
+                          ? `text-base text-muted-foreground leading-relaxed
                         md:opacity-0 md:translate-y-3
                         md:group-hover:opacity-100 md:group-hover:translate-y-0
                         md:group-focus-visible:opacity-100 md:group-focus-visible:translate-y-0
-                        md:transition-all md:duration-500
-                      `}
+                        md:transition-all md:duration-500`
+                          : "text-base text-muted-foreground leading-relaxed"
+                      }
                     >
                       {project.description}
                     </p>
