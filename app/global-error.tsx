@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono"
 // <html>/<body> shell layout.tsx normally provides, including the "dark"
 // class the site's CSS variables depend on since there's no light theme.
 export default function GlobalError({
+  error,
   reset,
 }: {
   error: Error & { digest?: string }
@@ -24,10 +25,12 @@ export default function GlobalError({
   // Mirrors error.tsx: this boundary swaps in the whole document without a
   // route change or title update, so there's no normal cue for assistive
   // tech that something happened - move focus to the heading so it gets
-  // announced.
+  // announced. error.tsx also logs the error itself; this boundary was
+  // missing that, so a root-layout failure never reached the console.
   useEffect(() => {
+    console.error(error)
     headingRef.current?.focus()
-  }, [])
+  }, [error])
 
   return (
     <html lang="en" className={`dark ${geist.variable} ${geistMono.variable}`}>
